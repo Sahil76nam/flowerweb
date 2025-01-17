@@ -1,0 +1,13 @@
+{
+    "flowerdeliver":[
+        {
+             "name":"sahil namdev",
+             "number":123456666,
+             "email":"sahil1@gamil.com",
+             "payment":"cod",
+             "city":"bhopal",
+             "state":"mp",
+             "pincode":"487661"
+        }
+    ]
+}
