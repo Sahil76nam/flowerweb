@@ -28,7 +28,8 @@ html,body{
     align-items: center;
 }
 nav{
-    background-color: rgb(184, 82, 102);
+    background: linear-gradient(rgb(19, 90, 66), #183D3D);
+    /* background-color: rgb(184, 82, 102); */
     border: 1px solid black;
 }
 main nav .logo img{
@@ -49,13 +50,31 @@ nav{
     justify-content: space-evenly;
     gap: 60px;
 }
+#nav1 .addbag a{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+   span.addcount{
+    background-color: rgb(223, 68, 11);
+    white-space: Wrap;
+    border-radius: 50%;
+    
+    width: 5px;
+    padding: 1px 4px;
+    position: relative;
+    bottom: 8px;
+    right: 5px;
+}
 #headingpart{
     display: flex;
     justify-content: center;
     
     width: 100%;
     height: 500px;
-    background-color: rgb(221, 126, 145);
+    background: linear-gradient(rgb(19, 90, 66), #183D3D);
+    /* background-color: rgb(221, 126, 145); */
 }
 .heading1{
     width: 55%;
@@ -90,7 +109,7 @@ nav{
     border-radius: 40%;
 }
 .headingimage{
-    box-shadow: 1px 2px 30px yellow;
+    box-shadow: 1px 2px 30px rgb(1, 49, 35);
 }
 #flower{
     width: 100%;
@@ -104,6 +123,7 @@ nav{
 #flower .flowerimg{
     width: 150px;
     height: 150px;
+    
     background-color: bisque;
     border-radius: 50%;
 }
@@ -184,17 +204,45 @@ nav{
     }
 }
 #page2{
-    background-color: rgb(14, 90, 65);
+    
     width: 100%;
-    height: 100%;
-    position: relative;
-    top: 50%;
+    /* overflow-y: visible !important; */
+    /* height: auto !important; */
+height: 2000px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
     
 }
 .addcart{
-    width: 200px;
-    height: 300px;
-    border: 1px solid black;
+    width: 260px;
+    height: 460px;
+    border: 5px solid wheat;
     margin-left: 20px;
+    margin-top: 13px;
     
 }
+.flowername{
+    margin: 8px 10px;
+    text-transform: uppercase;
+}
+.rupees{
+    margin: 5px 10px;
+}
+.date{
+    margin: 13px 10px; 
+}
+.date span{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+.addcartbtn button{
+    padding: 7px 15px;
+    margin-left: 50px;
+    background: lightgreen;
+    font-weight: 600;
+    border: none;
+}
+

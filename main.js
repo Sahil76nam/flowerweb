@@ -5,31 +5,63 @@ const scroll = new LocomotiveScroll({
 
 
 
-// let getdata=async()=>{
-//     let url='http://localhost:3000/flowerdeliver ';
-//     let res=await fetch(url,{method:"GET"})
-//     let data1=await res.json()
-
-// let show=document.querySelector("#display")
-// console.log("sahil")
-// data1.map((e)=>{
-//     show.innerHTML+=`
-//     <div class="data">
-//     <h1>${e.name}</h1>
-//     <h1>${e.number}</h1>
-//     <h1>${e.email}</h1>
-//     <h1>${e.payment}</h1>
-//     <h1>${e.city}</h1>
-//     <h1>${e.state}</h1>
-//     <h1>${e.pincode}</h1>
-//     </div>`
-// })}
-
-var elem=document.querySelectorAll(".elem")
-var page1=document.querySelector("#page1")
-elem.forEach(function(e){
-    e.addEventListener("mouseenter",function(){
-       var bgimg= e.getAttribute("data-image")
-       page1.style.backgroundImage=`url(${bgimg})`
+function movingamination(){
+    var elem=document.querySelectorAll(".elem")
+    var page1=document.querySelector("#page1")
+    elem.forEach(function(e){
+        e.addEventListener("mouseenter",function(){
+           var bgimg= e.getAttribute("data-image")
+           page1.style.backgroundImage=`url(${bgimg})`
+        })
     })
-})
+}
+movingamination();
+
+function displaydatahome(){
+    let itemcontainer = document.querySelector('#page2');
+    let innerHTML='';
+    items.forEach(item=>{
+       innerHTML+=`
+        
+    <div class="addcart">
+                   <div class="cartimage">
+                       <img src="${item.cartimage}" width="250px" height="300px" >
+                   </div>
+                   <div class="flowername">
+                       <h4>${item.flowername}</h4>
+                   </div>
+                   <div class="rupees"><h5> ₹ ${item.rupees}</h5></div>
+                   <div class="date">Earlier Delivery: <span>${item.date}</span></div>
+                   <div class="addcartbtn"><button onclick="addtocart(${item.id})">Add to Cart</button></div>
+               </div>`;
+    })
+    itemcontainer.innerHTML=innerHTML;
+}
+
+
+let addcart=[];
+
+function addtocart(itemId){
+    addcart.push(itemId);
+    localStorage.setItem('addcart',JSON.stringify(addcart));
+    displaybagitem();
+
+
+}
+addtocart();
+ function displaybagitem(){
+   let addcarticon=document.querySelector('.addcount');
+   if(addcart.length>0){
+   addcarticon.innerText = addcart.length;
+   addcarticon.style.visibility='visible';
+   }else{
+    addcarticon.style.visibility='hidden';
+   }
+ }
+ function onLoad(){
+    let addcartstr=localStorage.getItem('addcart');
+    addcart=addcartstr ? JSON.parse(addcartstr):[];
+ displaybagitem();
+ displaydatahome();
+ }
+ onLoad();
