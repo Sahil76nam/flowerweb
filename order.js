@@ -7,6 +7,7 @@ let show=document.querySelector("#display")
 console.log("sahil")
 data1.map((e)=>{
     show.innerHTML+=`
+    
     <div class="data">
     <h1>${e.name}</h1>
     <h1>${e.number}</h1>

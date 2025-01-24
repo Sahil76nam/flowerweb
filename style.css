@@ -21,10 +21,10 @@ html,body{
     font-size: 1.1rem;
     text-align: center;
     padding-top: 10px;
-    background-color: burlywood;
+    background-color: rgb(240, 149, 30);
 }
 .data {
-    display: flex;
+    
     align-items: center;
 }
 nav{
@@ -208,7 +208,7 @@ nav{
     width: 100%;
     /* overflow-y: visible !important; */
     /* height: auto !important; */
-height: 2000px;
+height: 1000px;
     
     display: flex;
     flex-wrap: wrap;
@@ -244,5 +244,77 @@ height: 2000px;
     background: lightgreen;
     font-weight: 600;
     border: none;
+}
+/* //        bag html           //   */
+#showcart{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+    padding: 40px;
+    
+
+}
+.showdata{
+    margin-left: 20px;
+    
+}
+.showdata .companyname{
+    margin: 8px 0;
+}
+.datarupees{
+    margin: 8px 0;
+    font-weight: 800;
+}
+.returndata{
+    margin: 11px 0;
+}
+.delivery{
+    font-weight: 700;
+}
+.removeicon{
+    font-size: 1.5rem;
+    position: relative;
+    left: 23%;
+    top: 7px;
+    background-color: black;
+    color:#fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.datasamrry{
+    position: relative;
+    left: 30%;
+}
+.datasamrry .tmrp{
+    margin: 15px 0;
+}
+.tmrp span{
+    margin-left: 160px;
+}
+.confee{
+    margin-bottom: 10px;
+}
+.confee span{
+    margin-left: 110px;
+}
+.totalamount{
+    margin: 20px 0;
+}
+.totalamount span{
+    margin-left: 130px;
+}
+.border{
+    border-bottom: 1px solid black ;
+}
+.placeorder{
+    margin-top: 25px;
+}
+.placeorder button{
+    padding: 6px 100px;
+    background-color: rgb(233, 77, 129);
+    font-weight: 800;
 }
 
