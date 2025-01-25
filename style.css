@@ -317,4 +317,17 @@ height: 1000px;
     background-color: rgb(233, 77, 129);
     font-weight: 800;
 }
+/* //          sign up page         // */
+.signheading{
+    position: relative;
+    left: 45%;
+    top: 20%;
+}
+#sign form{
+      
+      position: relative;
+      width: 50%;
+      left: 40%;
+      
+}
 
