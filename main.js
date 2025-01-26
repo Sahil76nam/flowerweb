@@ -17,55 +17,54 @@ function movingamination(){
 }
 movingamination();
 
-function displaydatahome(){
-    let itemcontainer = document.querySelector('#page2');
-    let innerHTML='';
-    items.forEach(item=>{
-       innerHTML+=`
+// ocument.querySelector('#page2');
+//     let innerHTML='';
+//     items.forEach(item=>{
+//        innerHTML+=`
         
-    <div class="addcart">
-                   <div class="cartimage">
-                       <img src="${item.cartimage}" width="250px" height="300px" >
-                   </div>
-                   <div class="flowername">
-                       <h4>${item.flowername}</h4>
-                   </div>
-                   <div class="rupees"><h5> ₹ ${item.rupees}</h5></div>
-                   <div class="date">Earlier Delivery: <span>${item.date}</span></div>
-                   <div class="addcartbtn"><button onclick="addtocart(${item.id})">Add to Cart</button></div>
-               </div>`;
-    })
-    itemcontainer.innerHTML=innerHTML;
-}
+    // <div class="addcart">
+    //                <div class="cartimage">
+    //                    <img src="${item.cartimage}" width="250px" height="300px" >
+    //                </div>
+    //                <div class="flowername">
+    //                    <h4>${item.flowername}</h4>
+    //                </div>
+    //                <div class="rupees"><h5> ₹ ${item.rupees}</h5></div>
+    //                <div class="date">Earlier Delivery: <span>${item.date}</span></div>
+    //                <div class="addcartbtn"><button onclick="addtocart(${item.id})">Add to Cart</button></div>
+    //            </div>`;
+//     })
+//     itemcontainer.innerHTML=innerHTML;
+// }
 
 
-var addcart=[];
+// var addcart=[];
 
-function addtocart(itemId){
-    addcart.push(itemId);
-    localStorage.setItem('addcart',JSON.stringify(addcart));
-    displaybagitem();
-
-
-}
+// function addtocart(itemId){
+//     addcart.push(itemId);
+//     localStorage.setItem('addcart',JSON.stringify(addcart));
+//     displaybagitem();
 
 
- function displaybagitem(){
-   let addcarticon=document.querySelector('.addcount');
-   if(addcart.length>0){
-   addcarticon.innerText = addcart.length;
-   addcarticon.style.visibility='visible';
-   }else{
-    addcarticon.style.visibility='hidden';
-   }
- }
- function onLoad(){
-    let addcartstr=localStorage.getItem('addcart');
-    addcart=addcartstr ? JSON.parse(addcartstr):[];
- displaybagitem();
- displaydatahome();
- }
- onLoad();
+// }
+
+
+//  function displaybagitem(){
+//    let addcarticon=document.querySelector('.addcount');
+//    if(addcart.length>0){
+//    addcarticon.innerText = addcart.length;
+//    addcarticon.style.visibility='visible';
+//    }else{
+//     addcarticon.style.visibility='hidden';
+//    }
+//  }
+//  function onLoad(){
+//     let addcartstr=localStorage.getItem('addcart');
+//     addcart=addcartstr ? JSON.parse(addcartstr):[];
+//  displaybagitem();
+//  displaydatahome();
+//  }
+//  onLoad();
 
  
 
@@ -85,7 +84,8 @@ function addtocart(itemId){
  
 //      function generateHtml(item){
 //          return   `<div class="showcartimage">
-//               <img src="${item.cartimage}" width="170px" height="200px" >
+//               <img srfunction displaydatahome(){
+    // let itemcontainer = dc="${item.cartimage}" width="170px" height="200px" >
 
 //               </div>
 //              <div class="showdata">
@@ -111,3 +111,46 @@ function addtocart(itemId){
 
 
 // generateHtml();
+
+
+const flowershop=document.querySelector('#page2')
+let cart=JSON.parse(localStorage.getItem('data'))|| [];
+
+function generateshop(){
+    flowershop.innerHTML=items.map((item)=>{
+        let{id,cartimage,flowername,rupees,date}=item;
+        return `<div class="addcart">
+                   <div class="cartimage">
+                       <img src="${cartimage}" width="250px" height="300px" >
+                   </div>
+                   <div class="flowername">
+                       <h4>${flowername}</h4>
+                   </div>
+                   <div class="rupees"><h5> ₹ ${rupees}</h5></div>
+                   <div class="date">Earlier Delivery: <span>${date}</span></div>
+                   <div class="addcartbtn"><button onclick="addtocart('${id}',${cartimage}','${flowername}','${rupees}','${date}')">Add to Cart</button></div>
+               </div>`
+    })
+}
+
+let addtocart=(id,cartimage,flowername,rupees,date)=>{
+    cart.push({
+        id:id,
+        cartimage:cartimage,
+        flowername:flowername,
+        repees:rupees,
+        date:date
+
+    })
+    localStorage.setItem('data',JSON.stringify(cart))
+    calculateitem();
+}
+    function calculateitem(){
+    let count=document.querySelector('.addcount');
+     let countitem=cart.lenght;
+     count.innerHTML=countitem;
+}
+
+
+generateshop();
+calculateitem();
