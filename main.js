@@ -128,17 +128,17 @@ function generateshop(){
                    </div>
                    <div class="rupees"><h5> ₹ ${rupees}</h5></div>
                    <div class="date">Earlier Delivery: <span>${date}</span></div>
-                   <div class="addcartbtn"><button onclick="addtocart('${id}',${cartimage}','${flowername}','${rupees}','${date}')">Add to Cart</button></div>
+                   <div class="addcartbtn"><button onclick="addtocart('${id}','${cartimage}','${flowername}',${rupees},'${date}')">Add to Cart</button></div>
                </div>`
     })
 }
 
-let addtocart=(id,cartimage,flowername,rupees,date)=>{
+let addtocart=(id ,cartimage,flowername,rupees,date)=>{
     cart.push({
         id:id,
         cartimage:cartimage,
         flowername:flowername,
-        repees:rupees,
+        rupees:rupees,
         date:date
 
     })
@@ -147,7 +147,7 @@ let addtocart=(id,cartimage,flowername,rupees,date)=>{
 }
     function calculateitem(){
     let count=document.querySelector('.addcount');
-     let countitem=cart.lenght;
+     let countitem=cart.length;
      count.innerHTML=countitem;
 }
 
