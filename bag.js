@@ -64,9 +64,13 @@ function generateitem(){
             <div class="returndata">14 day Return Available</div>
             <div class="delivery"> Delivery Time : ${date}</div>
         </div>
+        <div class="removeicon"><i class="fa-solid fa-xmark"></i></div>
          </div>`
+
+
          
-        // <div class="removeicon"><i class="fa-solid fa-xmark"></i></div>
+         
+         
         //  <div class="datasamrry">
         //     <div class="showitem"><h5>Price Details (2 Items)</h5></div>
         //     <div class="tmrp"><h4>Total MRP <span>₹ 999</span></h4></div>
