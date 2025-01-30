@@ -245,17 +245,24 @@ height: 1000px;
     font-weight: 600;
     border: none;
 }
+#nav1 h4 a{
+    text-decoration: none;
+    color: antiquewhite;
+}
 /* //        bag html           //   */
 #showcart{
     
     
-    width: 100%;
+    width: 70%;
     height: 100vh;
-    background-color: burlywood;
+    
     padding: 30px;
     margin-bottom: 30px;
     
 
+}
+#mainaddcart{
+    display: flex;
 }
 .showcartimage{
     display: flex;
@@ -293,7 +300,8 @@ height: 1000px;
 }
 .datasamrry{
     position: relative;
-    left: 30%;
+    top: 30px;
+    
 }
 .datasamrry .tmrp{
     margin: 15px 0;
