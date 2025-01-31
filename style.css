@@ -208,11 +208,11 @@ nav{
     width: 100%;
     /* overflow-y: visible !important; */
     /* height: auto !important; */
+
 height: 1000px;
-    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     
     
 }

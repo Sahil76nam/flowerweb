@@ -51,7 +51,7 @@ function calculateitem(){
 function generateitem(){
     if(cart.length!==0){
         return(shopcart.innerHTML=cart.map((item)=>{
-            let{cartimage,flowername,rupees,date}=item;
+            let{id,cartimage,flowername,rupees,date}=item;
             return `<div class="showcartimage">
             <img src="${cartimage}" width="170px" height="200px" >
 
@@ -64,9 +64,18 @@ function generateitem(){
             <div class="returndata">14 day Return Available</div>
             <div class="delivery"> Delivery Time : ${date}</div>
         </div>
-        <div class="removeicon"><i class="fa-solid fa-xmark"></i></div>
+        <div class="removeicon" onclick="removetobag(${id})"><i class="fa-solid fa-xmark"></i></div>
          </div>`
         }))
     }
 }
+
 generateitem();
+let removetobag=(id)=>{
+    cart=cart.filter((x)=> x.id !=id)
+    
+    localStorage.setItem('data',JSON.stringify(cart))
+    calculateitem();
+    generateitem();
+}
+
