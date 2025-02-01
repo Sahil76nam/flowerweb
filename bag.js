@@ -79,3 +79,25 @@ let removetobag=(id)=>{
     generateitem();
 }
 
+function displaysamrry(){
+    let bagitemsamrry =document.querySelector('.datasamrry')
+    const Conveniencefee=69;
+    let totalitem=cart.length;
+    let totalmrp=0;
+    
+    cart.forEach(items=>{
+        totalmrp+=items.rupees;
+    })
+    let totalamount=totalmrp+Conveniencefee;
+    bagitemsamrry.innerHTML=`
+         <div class="showitem"><h5>Price Details (${totalitem} Items)</h5></div>
+            <div class="tmrp"><h4>Total MRP <span>₹ ${totalmrp}</span></h4></div>
+            <div class="confee"><h4>Convenience Fees <span>₹ ${Conveniencefee}</span></h4></div>
+            <div class="border"></div>
+            <div class="totalamount"><h4>Total Amount <span>₹ ${totalamount}</span></h4></div>
+            
+            <div class="placeorder"><button>PLACE ORDER</button></div>`
+            
+}
+displaysamrry();
+
