@@ -24,7 +24,7 @@ html,body{
     background-color: rgb(240, 149, 30);
 }
 .data {
-    
+    display: flex;
     align-items: center;
 }
 nav{
