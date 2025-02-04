@@ -9,7 +9,7 @@ data1.map((e)=>{
     show.innerHTML+=`
     
     <div class="data">
-    <h1>${e.name}</h1>
+    <h1 id="det">${e.name}</h1>
     <h1>${e.number}</h1>
     <h1>${e.email}</h1>
     <h1>${e.payment}</h1>
