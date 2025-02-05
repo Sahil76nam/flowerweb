@@ -4,12 +4,12 @@ let getdata=async()=>{
     let data1=await res.json()
 
 let show=document.querySelector("#display")
-console.log("sahil")
+
 data1.map((e)=>{
     show.innerHTML+=`
     
     <div class="data">
-    <h1 id="det">${e.name}</h1>
+    <h1 >${e.name}</h1>
     <h1>${e.number}</h1>
     <h1>${e.email}</h1>
     <h1>${e.payment}</h1>
@@ -17,8 +17,8 @@ data1.map((e)=>{
     <h1>${e.state}</h1>
     <h1>${e.pincode}</h1>
     <h1>${e.orderstatus}</h1>
-    <h1 onclick="del('${e.id}')">DELETE</h1>
-    <h1 onclick="updatee('${e.id}')">UPDATE</h1>
+    <h1 id="det" onclick="del('${e.id}')">DELETE</h1>
+    <h1 id="det1" onclick="updatee('${e.id}')">UPDATE</h1>
     </div>`
 })}
 
@@ -35,7 +35,7 @@ let ins=()=>{
     let dcity=document.querySelector("#dcity").value;
     let dstate=document.querySelector("#dstate").value;
     let dpincode=document.querySelector("#dpincode").value;
-    let dstatus=document.querySelector("#dstatus")
+    let dorderstatus=document.querySelector("#dorderstatus").value;
 
 
     let url=`http://localhost:3000/flowerdeliver`
@@ -53,7 +53,7 @@ let ins=()=>{
             city:dcity,
             state:dstate,
             pincode:dpincode,
-            status:dstatus
+            orderstatus:dorderstatus
         })
     })
     location.href="deliver.html"
@@ -74,7 +74,7 @@ let updatee=async(id)=>{
         enter city: <input type="text"  id="datacity" value=${data.city}>
         enter state: <input type="text"  id="datastate" value=${data.state}>
         PAYMENT pincode: <input type="text"  id="datapincode" value=${data.pincode}>
-        STATUS <input type="text"  id="datastatus" value=${data.status}>
+        STATUS <input type="text"  id="dataorderstatus" value=${data.orderstatus}>
         <button type="submit" value="Update" onclick=" return finalupdate(${data.id})">update</button>
 `
 
@@ -82,14 +82,14 @@ document.querySelector("#updateform").innerHTML=formdata
 }
 
 let finalupdate=(id)=>{
-    let dataname=document.querySelector("#dataform").value
+    let dataname=document.querySelector("#dataname").value
     let datanumber=document.querySelector("#datanumber").value
     let dataemail=document.querySelector("#dataemail").value
     let datapayment=document.querySelector("#datapayment").value
     let datacity=document.querySelector("#datacity").value
     let datastate=document.querySelector("#datastate").value
     let datapincode=document.querySelector("#datapincode").value
-    let datastatus=document.querySelector("#datastatus").value
+    let dataorderstatus=document.querySelector("#dataorderstatus").value
 
 
     let url=`http://localhost:3000/flowerdeliver/${id}`
@@ -107,7 +107,7 @@ let finalupdate=(id)=>{
             city:datacity,
             state:datastate,
             pincode:datapincode,
-            status:datastatus
+            orderstatus:dataorderstatus
 
         })
     })
