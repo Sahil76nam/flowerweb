@@ -63,19 +63,51 @@ html,body{
     background-position: center;
     object-fit: cover;
     height: 100%;
+    width: 100%;
     
 }
 #deliverdata h1{
     left: 35%;
     top: 5px;
-    margin-bottom: 20px;
+    
+    margin-bottom: 40px;
     color: #fff;
     position: relative;
 }
-#deliverdata form{
-    position: relative;
-    left: 30%;
+#deliverdata form input{
+    
+    padding: 10px 40px;
+    border: #fff;
+    background-color:#ae97b1;
+    border-radius: 10px;
+    font-size: 1.1rem;
     color: #fff;
+    text-transform: uppercase;
+    font-weight: bold ;
+    
+}
+ 
+form .form1{
+    
+   display: flex;
+   
+    
+}
+.form1 .name{
+    margin-left: 250px;
+    margin-bottom: 40px;
+    
+}
+form button{
+    padding: 10px 50px;
+    margin-left: 44%;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(54, 173, 43);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold ;
+
 }
 nav{
     background: linear-gradient(rgb(19, 90, 66), #183D3D);
