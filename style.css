@@ -418,6 +418,18 @@ height: 1000px;
     margin-bottom: 30px;
 }
 /* //          sign up page         // */
+/* .signheading{
+    position: relative;
+    left: 45%;
+    top: 20%;
+}
+#sign form{
+      
+      position: relative;
+      width: 50%;
+      left: 40%;
+      
+} */
 .signheading{
     position: relative;
     left: 45%;
@@ -430,4 +442,3 @@ height: 1000px;
       left: 40%;
       
 }
-
