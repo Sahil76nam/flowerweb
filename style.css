@@ -496,3 +496,29 @@ height: 1000px;
     object-fit: cover;
     background-position: center;
 }
+#updateform{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+#updateform input{
+    padding: 5px 22px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 300px;
+    height: 50px;
+    background-color: antiquewhite;
+    margin-left: 540px;
+    margin-top: 10px;
+
+}
+#updateform button{
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color: rgb(37, 156, 117);
+    border: none;
+    font-weight: 600;
+    margin-left: 550px;
+    font-size: 1.3rem;
+}

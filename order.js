@@ -67,15 +67,20 @@ let updatee=async(id)=>{
     let data= await res.json()
     
 
-    let formdata=` enter name: <input type="text" id="dataname" value=${data.name}>
-        enter NUMBER: <input type="number" id="datanumber"value=${data.number}>
-        enter email: <input type="text"  id="dataemail"value=${data.email}>
-        PAYMENT mode: <input type="text"  id="datapayment"value=${data.payment}>
-        enter city: <input type="text"  id="datacity" value=${data.city}>
-        enter state: <input type="text"  id="datastate" value=${data.state}>
-        PAYMENT pincode: <input type="text"  id="datapincode" value=${data.pincode}>
-        STATUS <input type="text"  id="dataorderstatus" value=${data.orderstatus}>
-        <button type="submit" value="Update" onclick=" return finalupdate(${data.id})">update</button>
+    let formdata=` 
+    
+    
+         <input type="text" id="dataname" value=${data.name}><br><br>
+         <input type="number" id="datanumber"value=${data.number}><br><br>
+         <input type="text"  id="dataemail"value=${data.email}><br><br>
+         <input type="text"  id="datapayment"value=${data.payment}><br><br>
+        <input type="text"  id="datacity" value=${data.city}><br><br>
+        <input type="text"  id="datastate" value=${data.state}><br><br>
+        <input type="text"  id="datapincode" value=${data.pincode}><br><br>
+        <input type="text"  id="dataorderstatus" value=${data.orderstatus}><br><br>
+        <button type="submit" value="Update" onclick=" return finalupdate(${data.id})">Update</button><br><br>
+         
+                     
 `
 
 document.querySelector("#updateform").innerHTML=formdata
