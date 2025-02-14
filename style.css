@@ -522,3 +522,32 @@ height: 1000px;
     margin-left: 550px;
     font-size: 1.3rem;
 }
+#footer{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(156, 168, 168);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#footer .foot1 h1{
+   font-size: 1.5rem;
+   padding-bottom: 20px;
+}
+.foot1 h3{
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+.foot1 input{
+    padding: 5px 17px;
+}
+.foot1 h3 i{
+    margin-left: 10px;
+}
+.foot1 button{
+    background-color: black;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
